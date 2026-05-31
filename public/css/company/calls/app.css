@@ -1,0 +1,962 @@
+@import url("../public.css");
+
+h1,
+span,
+strong,
+p {
+  color: var(--text-color);
+}
+
+.company-calls-room.container-fluid {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 24px;
+  overflow: hidden;
+}
+
+.company-calls-room .info {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 30;
+  pointer-events: none;
+}
+
+.company-calls-room .info .room-info {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 18px;
+  background: rgba(7, 4, 28, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+  flex-wrap: wrap;
+}
+
+.company-calls-room .info .room-info .room-id {
+  font-size: 0.95rem;
+  white-space: nowrap;
+  color: var(--text-color);
+  letter-spacing: 0.02em;
+}
+
+.company-calls-room .info .room-info .copy-link {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.25s ease;
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+}
+
+.company-calls-room:hover .info .room-info .copy-link {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.company-calls-room .info .room-info .copy-link:hover {
+  background: rgba(143, 91, 255, 0.18);
+  transform: translateY(-1px);
+}
+
+.company-calls-room .info .room-info .copy-link svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.company-calls-room .info .zoom-in-or-out {
+  pointer-events: auto;
+  margin-inline-start: 10px;
+}
+
+.company-calls-room .control-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.10);
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all 0.25s ease;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.20);
+}
+
+.company-calls-room .control-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: scale(1.04);
+}
+
+.company-calls-room .control-btn.end-call {
+  background: rgba(231, 76, 60, 0.95);
+}
+
+.company-calls-room .control-btn.end-call:hover {
+  background: rgba(192, 57, 43, 0.98);
+}
+
+.company-calls-room .control-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.company-calls-room .control-btn .icon-shrink {
+  display: none;
+}
+
+.company-calls-room .video-container {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  z-index: 1;
+}
+
+.company-calls-room .video-container .videos-them {
+  position: absolute;
+  inset: 0;
+  display: grid;
+}
+
+.company-calls-room .video-container .videos-them .he-video {
+  width: 100%;
+  height: 100%;
+}
+
+.company-calls-room .video-container .my-video {
+  position: absolute;
+  margin: 14px;
+  width: calc(100% - 28px);
+  height: calc(100% - 28px);
+  z-index: 5;
+  transition: 0.2s ease;
+  border-radius: 18px;
+}
+
+.company-calls-room .video-container .my-video.start-call {
+  width: 36% !important;
+  height: 40% !important;
+  bottom: 0;
+  right: 0;
+}
+
+.company-calls-room .video-container .video-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.company-calls-room .video-container .video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #000;
+  border-radius: 18px;
+}
+
+.company-calls-room .video-container .video-wrapper .audio {
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at top, rgba(143, 91, 255, 0.35), transparent 45%),
+    linear-gradient(45deg, #f8a3a3, #8aabf3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.company-calls-room .video-container .video-wrapper .audio p {
+  width: 90px;
+  height: 90px;
+  font-size: 30px;
+  border-radius: 50%;
+  background-color: rgba(19, 19, 19, 0.42);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  backdrop-filter: blur(10px);
+}
+
+.company-calls-room .video-container .video-wrapper .video-label {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(7, 4, 28, 0.62);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+}
+
+.company-calls-room .main-controls {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  width: auto;
+  z-index: 30;
+}
+
+.company-calls-room .main-controls .list {
+  position: absolute;
+  bottom: 86px;
+  left: 0;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: rgba(7, 4, 28, 0.82);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 0.2s ease;
+  z-index: 10;
+  backdrop-filter: blur(16px);
+}
+
+.company-calls-room .main-controls .list.hidden-list {
+  bottom: -96px;
+}
+
+.company-calls-room .main-controls .list.show-list {
+  transform: scale(1) !important;
+}
+
+.company-calls-room .main-controls .list button {
+  padding: 12px 14px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.05);
+  outline: none;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  transition: 0.2s ease;
+}
+
+.company-calls-room .main-controls .list button:hover {
+  background: rgba(143, 91, 255, 0.18);
+}
+
+.company-calls-room .main-controls .list button svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.company-calls-room .main-controls .controls {
+  display: flex;
+  gap: 15px;
+  z-index: 12;
+  transition: 0.2s ease;
+}
+
+.company-calls-room .main-controls .controls.hidden-controls {
+  transform: translateY(100px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.company-calls-room .main-controls .controls .control-btn.in-use {
+  background-color: rgba(255, 0, 0, 0.55) !important;
+}
+
+.company-calls-room .main-controls .controls .control-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.company-calls-room .words-apeech {
+  position: fixed;
+  left: 20px;
+  right: 20px;
+  bottom: 104px;
+  z-index: 25;
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  pointer-events: none;
+}
+
+.company-calls-room .words-apeech.show {
+  display: flex !important;
+}
+
+.company-calls-room .words-apeech .words {
+  width: 255px;
+  max-height: 180px;
+  overflow: auto;
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(7, 4, 28, 0.72);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+  color: var(--text-color);
+  line-height: 1.9;
+  pointer-events: auto;
+}
+
+
+.company-calls-room .words-apeech .words h1 {
+  margin: 0 0 12px;
+  font-size: 1.4rem;
+}
+
+.company-calls-room .words-apeech .words p,
+.company-calls-room .words-apeech .words li {
+  color: var(--white-off-color);
+}
+
+.company-calls-room .words-apeech .words ul,
+.company-calls-room .words-apeech .words ol {
+  margin: 10px 0;
+  padding-inline-start: 20px;
+}
+
+.company-calls-room .words-apeech .words li + li {
+  margin-top: 6px;
+}
+
+.company-calls-room .words-apeech #download {
+  pointer-events: auto;
+  width: fit-content;
+  padding: 13px 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: var(--btn-bg-img);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 16px 40px rgba(115, 60, 216, 0.28);
+  transition: 0.2s ease;
+}
+
+.company-calls-room .words-apeech #download:hover {
+  transform: translateY(-2px);
+}
+
+.company-calls-room .app-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 14px 20px;
+  background: rgba(26, 188, 156, 0.95);
+  color: #fff;
+  border-radius: 12px;
+  z-index: 9999;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.company-calls-room .app-notification.hide {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.company-calls-room .in-use {
+  background-color: rgba(255, 0, 0, 0.55) !important;
+}
+
+@media (max-width: 768px) {
+  .company-calls-room.container-fluid {
+    padding: 12px;
+  }
+
+  .company-calls-room .info {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .company-calls-room .info .room-info {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .company-calls-room .info .room-info .copy-link {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+
+  .company-calls-room .video-container .my-video.start-call {
+    width: 45% !important;
+    height: 30% !important;
+  }
+
+  .company-calls-room .words-apeech {
+    left: 12px;
+    right: 12px;
+    bottom: 96px;
+  }
+
+  .company-calls-room .main-controls {
+    bottom: 12px;
+  }
+}
+
+.company-calls {
+  min-height: 100vh;
+  padding: 24px;
+  overflow: auto;
+  gap: 18px;
+}
+
+.company-calls .panel {
+  position: relative;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+  display: grid;
+  gap: 10px;
+}
+
+.company-calls .left-panel {
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: fit-content;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.company-calls .right-panel {
+  padding: 22px;
+  min-height: 120vh;
+  overflow: auto;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.company-calls .accent-line {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, rgba(143, 91, 255, 0.95), transparent);
+  opacity: 0.8;
+}
+
+.company-calls .brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 34px;
+}
+
+.company-calls .brand-mark {
+  width: 54px;
+  height: 54px;
+  border-radius: 18px;
+  background: var(--btn-bg-img);
+  box-shadow: 0 20px 50px rgba(115, 60, 216, 0.35);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.company-calls .brand-mark svg,
+.company-calls .mini-icon svg,
+.company-calls .btn svg,
+.company-calls .icon svg {
+  fill: currentColor;
+}
+
+.company-calls .brand h1 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: -0.04em;
+}
+
+.company-calls .brand p {
+  margin: 6px 0 0;
+  color: var(--white-off-color);
+  line-height: 1.6;
+  max-width: 360px;
+}
+
+.company-calls .hero-box {
+  padding: 22px;
+  background: linear-gradient(135deg, rgba(143, 91, 255, 0.16), rgba(255, 255, 255, 0.03)),    rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  margin-bottom: 18px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transform: perspective(900px) rotateX(1.2deg) rotateY(-1.2deg);
+  -webkit-transform: perspective(900px) rotateX(1.2deg) rotateY(-1.2deg);
+  -moz-transform: perspective(900px) rotateX(1.2deg) rotateY(-1.2deg);
+  -ms-transform: perspective(900px) rotateX(1.2deg) rotateY(-1.2deg);
+  -o-transform: perspective(900px) rotateX(1.2deg) rotateY(-1.2deg);
+}
+
+.company-calls .hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: var(--chip-bg);
+  border: 1px solid rgba(143, 91, 255, 0.18);
+  color: var(--text-color);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.company-calls .hero-title {
+  margin: 14px 0 10px;
+  font-size: clamp(32px, 5vw, 60px);
+  line-height: 0.96;
+  letter-spacing: -0.06em;
+}
+
+.company-calls .hero-text {
+  margin: 0;
+  color: var(--white-off-color);
+  line-height: 1.8;
+  max-width: 46ch;
+  font-size: 15px;
+}
+
+.company-calls .signal-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.company-calls .signal {
+  padding: 14px;
+  background: var(--glass-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.company-calls .signal small {
+  display: block;
+  color: var(--white-off-color);
+  margin-bottom: 6px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.company-calls .signal strong {
+  font-size: 18px;
+}
+
+.company-calls .hero-cta {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.company-calls .btn {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-radius: 16px;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  border: 1px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.company-calls .btn-primary {
+  background: var(--btn-bg-img);
+  color: white;
+  box-shadow: 0 16px 40px rgba(115, 60, 216, 0.32);
+}
+
+.company-calls .btn-secondary {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: var(--border);
+  color: var(--text-color);
+}
+
+.company-calls .btn:hover {
+  transform: translateY(-2px);
+}
+
+.company-calls .dial {
+  margin-top: auto;
+  padding-top: 24px;
+  display: grid;
+  gap: 14px;
+}
+
+.company-calls .dial-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 12px;
+}
+
+.company-calls .dial-head h2 {
+  margin: 0;
+  font-size: 15px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--white-off-color);
+}
+
+.company-calls .dial-head span {
+  color: var(--white-off-color);
+  font-size: 13px;
+}
+
+.company-calls .line-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.company-calls .employee {
+  position: relative;
+  padding: 16px;
+  border-radius: 22px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02)),
+    rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.company-calls .employee::after {
+  content: "";
+  position: absolute;
+  inset: auto -20% -40% auto;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(143, 91, 255, 0.14), transparent 70%);
+  pointer-events: none;
+}
+
+.company-calls .employee-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.company-calls .avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  color: var(--text-color);
+  background: linear-gradient(145deg, rgba(143, 91, 255, 0.95), rgba(93, 62, 179, 0.55));
+  font-weight: 800;
+  font-size: 18px;
+  box-shadow: 0 16px 30px rgba(115, 60, 216, 0.25);
+  flex-shrink: 0;
+}
+
+.company-calls .employee-name {
+  margin: 0;
+  font-size: 18px;
+}
+
+.company-calls .employee-role {
+  margin: 4px 0 0;
+  color: var(--white-off-color);
+  font-size: 13px;
+}
+
+.company-calls .chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 14px;
+}
+
+.company-calls .chip {
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: rgba(143, 91, 255, 0.14);
+  border: 1px solid rgba(143, 91, 255, 0.16);
+}
+
+.company-calls .mini-meta {
+  display: grid;
+  gap: 8px;
+  color: var(--white-off-color);
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.company-calls .mini-meta strong {
+  color: var(--text-color);
+}
+
+.company-calls .call-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.company-calls .call-link {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+  padding: 12px 12px;
+  border-radius: 15px;
+  font-weight: 800;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.company-calls .call-link svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.company-calls .call-link.voice {
+  background: linear-gradient(19deg, rgba(143, 91, 255, 0.24), rgba(115, 60, 216, 0.42));
+  box-shadow: 0 12px 28px rgba(115, 60, 216, 0.18);
+}
+
+.company-calls .call-link.video {
+  background: linear-gradient(19deg, rgba(17, 201, 138, 0.16), rgba(143, 91, 255, 0.32));
+  box-shadow: 0 12px 28px rgba(17, 201, 138, 0.12);
+}
+
+.company-calls .call-link:hover {
+  transform: translateY(-2px);
+}
+
+.company-calls .right-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.company-calls .search {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: var(--field-bg);
+  border: 1px solid var(--field-border);
+}
+
+.company-calls .search svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--white-off-color);
+}
+
+.company-calls .search input {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: var(--text-color);
+  font-size: 15px;
+}
+
+.company-calls .search input::placeholder {
+  color: rgba(194, 189, 214, 0.7);
+}
+
+.company-calls .roster {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.company-calls .roster-card {
+  position: relative;
+  padding: 18px;
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03)),
+    rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  min-height: 226px;
+  overflow: hidden;
+}
+
+.company-calls .roster-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(143, 91, 255, 0.09), transparent 40%);
+  pointer-events: none;
+}
+
+.company-calls .flag {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--white-off-color);
+}
+
+.company-calls .status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-success);
+  box-shadow: 0 0 0 6px rgba(17, 201, 138, 0.14);
+  flex-shrink: 0;
+}
+
+.company-calls .roster-top {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 16px 0 14px;
+  align-items: start;
+}
+
+.company-calls .roster-top h3 {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: -0.04em;
+}
+
+.company-calls .roster-top p {
+  margin: 6px 0 0;
+  color: var(--white-off-color);
+  line-height: 1.7;
+  max-width: 28ch;
+}
+
+.company-calls .actions {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.company-calls .ghost-panel {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 20px;
+  border: 1px dashed rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--white-off-color);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+@media (max-width: 1100px) {
+  .company-calls {
+    grid-template-columns: 1fr;
+  }
+
+  .company-calls .left-panel,
+  .company-calls .right-panel {
+    min-height: auto;
+  }
+
+  .company-calls .roster,
+  .company-calls .line-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .company-calls {
+    padding: 12px;
+  }
+
+  .company-calls .left-panel,
+  .company-calls .right-panel {
+    padding: 16px;
+    border-radius: 24px;
+  }
+
+  .company-calls .signal-strip,
+  .company-calls .call-actions,
+  .company-calls .actions {
+    grid-template-columns: 1fr;
+  }
+
+  .company-calls .hero-title {
+    max-width: 100%;
+  }
+}

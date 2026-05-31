@@ -1,0 +1,40 @@
+.scene-logo {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  opacity: 1;
+  z-index: 1000;
+  animation: animationLogo 0.9s 4.5s forwards;
+  -webkit-animation: animationLogo 0.9s 4.5s forwards;
+}
+
+@keyframes animationLogo {
+  0% {
+    opacity: 1;
+    z-index: 1000;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+.scene-logo .cube-wrap {
+  width: 160px;
+  height: 160px;
+}
+
+.scene-logo .cube-wrap svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+#f1, #f2, #f3 {
+  opacity: 0;
+}

@@ -1,0 +1,426 @@
+@import url("../public.css");
+
+.section-1 {
+  position: relative;
+  isolation: isolate;
+}
+
+.section-1 .content {
+  position: absolute;
+  top: 45%;
+  z-index: 5;
+}
+
+.section-1 .content h1 {
+  font-size: clamp(38px, 5vw, 72px);
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: rgba(202, 202, 247, 0.747);
+  margin: 0;
+  position: relative;
+}
+
+.section-1 .overlay-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at center, rgba(181, 140, 255, 0.07), transparent 38%), radial-gradient(circle at center, rgba(93, 22, 181, 0.07), transparent 58%);
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  z-index: 0;
+}
+
+.section-1 canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.section-2 {
+  width: 100%;
+  position: relative;
+  padding: 120px 0;
+}
+
+.section-2 .send-card {
+  position: relative;
+  overflow: hidden;
+  width: min(100%, 1180px);
+  margin: 0 auto;
+  padding: 38px;
+  background: var(--glass);
+  background-image: var(--bg-img);
+  border: 1px solid var(--border);
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255,255,255,0.05);
+  border-radius: 34px;
+  -webkit-border-radius: 34px;
+  -moz-border-radius: 34px;
+  -ms-border-radius: 34px;
+  -o-border-radius: 34px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.section-2 .send-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top right,
+      rgba(143, 91, 255, 0.16),
+      transparent 32%),
+    radial-gradient(circle at bottom left,
+      rgba(88, 39, 179, 0.12),
+      transparent 34%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section-2 .send-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 180px;
+  height: 1px;
+  transform: translateX(-50%);
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,0.5),
+      transparent
+    );
+  opacity: 0.7;
+}
+
+.section-2 .section-head {
+  position: relative;
+  width: 85%;
+  margin-bottom: 38px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  z-index: 2;
+}
+
+.section-2 .section-head h2 {
+  margin: 0;
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #f4f0ff;
+}
+
+.section-2 .section-head p {
+  margin-top: 16px;
+  max-width: 620px;
+  font-size: 14px;
+  line-height: 1.9;
+  color: rgba(255,255,255,0.55);
+}
+
+.section-2 .request-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.section-2 .action-btn,
+.section-2 .btn {
+  appearance: none;
+  border: 0;
+  border-radius: 18px;
+  padding: 14px 18px;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    transform .25s ease,
+    opacity .25s ease,
+    box-shadow .25s ease,
+    border-color .25s ease;
+}
+
+.section-2 .action-btn:hover,
+.section-2 .btn:hover {
+  transform: translateY(-2px);
+}
+
+.section-2 .action-btn {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.section-2 .action-btn--reply {
+  background: var(--btn-bg-img);
+  color: #fff;
+  box-shadow:
+    0 14px 30px rgba(115, 60, 216, 0.26),
+    inset 0 1px 0 rgba(255,255,255,0.2);
+}
+
+.section-2 .action-btn--archive {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.section-2 .send-form {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 22px;
+}
+
+.section-2 .form-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.section-2 .form-grid.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.section-2 .field {
+  display: grid;
+  gap: 10px;
+}
+
+.section-2 .field label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: rgba(255,255,255,0.72);
+}
+
+.section-2 .field input,
+.section-2 .field select,
+.section-2 .field textarea {
+  width: 100%;
+  border: 1px solid rgba(255,255,255,0.08);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.045),
+      rgba(255,255,255,0.025)
+    );
+  color: var(--text-color);
+  border-radius: 20px;
+  padding: 16px 18px;
+  font: inherit;
+  outline: none;
+  transition:
+    border-color .25s ease,
+    box-shadow .25s ease,
+    transform .25s ease,
+    background .25s ease;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.section-2 .field textarea {
+  resize: vertical;
+  min-height: 180px;
+}
+
+.section-2 .field input::placeholder,
+.section-2 .field textarea::placeholder {
+  color: rgba(251, 249, 255, 0.38);
+}
+
+.section-2 .field select {
+  color: var(--text-color);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 16px 46px 16px 18px;
+}
+
+.section-2 .field input:hover,
+.section-2 .field select:hover,
+.section-2 .field textarea:hover {
+  border-color: rgba(255,255,255,0.14);
+}
+
+.section-2 .field input:focus,
+.section-2 .field select:focus,
+.section-2 .field textarea:focus {
+  border-color: rgba(143, 91, 255, 0.55);
+  box-shadow:
+    0 0 0 4px rgba(143, 91, 255, 0.12),
+    0 10px 30px rgba(91, 36, 194, 0.14);
+  transform: translateY(-1px);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.06),
+      rgba(255,255,255,0.03)
+    );
+}
+
+.section-2 .form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.section-2 .send-form .field .disabled-input {
+  opacity: 0.45;
+  cursor: not-allowed;
+  background: rgba(255,255,255,0.025);
+  border-color: rgba(255,255,255,0.05);
+  color: rgba(255,255,255,0.4);
+}
+
+.section-2 .send-form .field .disabled-input:focus {
+  border-color: rgba(255,255,255,0.05);
+  box-shadow: none;
+  transform: none;
+}
+
+.section-2 .send-form .field input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.section-2 .send-layout {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 28px;
+  position: relative;
+  z-index: 2;
+}
+
+.section-2 .company-card {
+  height: 89%;
+  padding: 26px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border-radius: 26px;
+  -webkit-border-radius: 26px;
+  -moz-border-radius: 26px;
+  -ms-border-radius: 26px;
+  -o-border-radius: 26px;
+}
+
+.section-2 .company-title {
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 10px;
+}
+
+.section-2 .company-block span {
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+}
+
+.section-2 .company-block p {
+  margin-top: 4px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+}
+
+.section-2 .map-box {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+  margin-top: 10px;
+}
+
+.section-2 .map-box iframe {
+  width: 100%;
+  height: 180px;
+  border: 0;
+  filter: grayscale(1) contrast(1.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .section-2 .send-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 992px) {
+  .section-2 {
+    padding: 90px 0;
+  }
+
+  .section-2 .send-card {
+    padding: 30px;
+    border-radius: 28px;
+  }
+
+  .section-2 .section-head h2 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-2 .form-grid.two {
+    grid-template-columns: 1fr;
+  }
+
+  .section-2 .send-card {
+    padding: 24px;
+    border-radius: 24px;
+  }
+
+  .section-2 .section-head {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+  }
+
+  .section-2 .section-head h2 {
+    font-size: 34px;
+  }
+
+  .section-2 .section-head p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .section-2 .field input,
+  .section-2 .field select,
+  .section-2 .field textarea {
+    border-radius: 18px;
+    padding: 15px 16px;
+  }
+
+  .section-2 .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-2 {
+    padding: 70px 0;
+  }
+
+  .section-2 .send-card {
+    padding: 18px;
+    border-radius: 22px;
+  }
+
+  .section-2 .section-head h2 {
+    font-size: 30px;
+  }
+
+  .section-2 .field textarea {
+    min-height: 150px;
+  }
+}

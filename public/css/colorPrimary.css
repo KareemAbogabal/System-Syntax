@@ -1,0 +1,53 @@
+:root {
+  --primary-color: #020018;
+  --secondary-color: #8f5bff;
+  --therd-color: rgba(143, 91, 255, 0.22);
+  --bg-color: #ead8ff;
+  --bg-color-opacity: rgba(234, 216, 255, 0.712);
+  --btn-color: #733cd8;
+  --bg-img: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.03)
+  );
+  --btn-bg-img: linear-gradient(
+    19deg,
+    var(--secondary-color) 0%,
+    var(--btn-color) 100%
+  );
+  --btn-unactive-bg: linear-gradient(
+    135deg,
+    rgba(120, 120, 120, 0.22),
+    rgba(90, 90, 90, 0.18),
+    rgba(70, 70, 70, 0.16)
+  );
+  --btn-unactive-border: rgba(255, 255, 255, 0.07);
+  --btn-unactive-text: rgba(255, 255, 255, 0.514);
+  --white-off-color: #c2bdd6;
+  --text-color: #fbf9ff;
+  --chip-bg: rgba(143, 91, 255, 0.18);
+  --colorSVG1: #5d3eb3;
+  --colorSVG2: #b58cff;
+  --glass: rgba(7, 4, 28, 0.72);
+  --glass-2: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.09);
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+  --field-bg: rgba(255, 255, 255, 0.05);
+  --field-border: rgba(255, 255, 255, 0.08);
+  --block: rgba(255, 116, 116, 0.12);
+  --block-border: rgba(206, 105, 105, 0.87);
+  --access: rgba(116, 255, 128, 0.12);
+  --access-border: rgba(133, 255, 133, 0.473);
+  --color-analysis: #6dff79;
+  --color-lead: #ff6a1d;
+  --color-conversion: #8f5bff;
+  --color-success: #11c98a;
+  --heat-0: rgba(255, 255, 255, 0.04);
+  --heat-1: rgba(143, 91, 255, 0.18);
+  --heat-2: rgba(143, 91, 255, 0.34);
+  --heat-3: rgba(143, 91, 255, 0.56);
+  --heat-4: rgba(143, 91, 255, 0.92);
+  --cell-size: 19px;
+  --gap-size: clamp(8px, 1vw, 20px);
+  --label-size: clamp(10px, 0.9vw, 15px);
+}

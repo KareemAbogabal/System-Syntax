@@ -1,0 +1,1 @@
+let sections = document.querySelectorAll(".section-1, .article");
