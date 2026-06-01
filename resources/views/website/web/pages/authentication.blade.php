@@ -11,6 +11,14 @@
 </head>
 <body>
   <div class="custom-cursor" id="customCursor"></div>
+  <div class="lux-notify-stack">
+    @if (session()->has('notification'))
+      @php
+        $notification = session('notification');
+      @endphp
+      <x-components::notification type="{{ $notification['type'] }}" message="{{ $notification['message'] }}" />
+    @endif
+  </div>
   <x-components::website.web.form-requsts />
   <x-components::website.web.form-login />
   @yield("content")
