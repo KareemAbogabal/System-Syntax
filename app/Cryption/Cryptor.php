@@ -84,47 +84,46 @@ class Cryptor {
           $colString[] = $matrix[0][$j];
         };
       };
-      $getIndexRowRand = array_rand($rowIndex);
-      // $getIndexColRand = array_keys($colIndex, $getIndexRowRand)[0];
-      $getIndexColRand = $colIndex[$getIndexRowRand];
-      $getStringRow = $matrix[$getIndexRowRand][0];
-      $getStringCol = $matrix[0][$getIndexColRand];
-      // $reversedRow = (7 * ($shuffleNewIndexRow - 11 + 52)) % 52; 
-      // $reversedCol = (7 * ($shuffleNewIndexCol - 11 + 26)) % 26;
+      $randomKey = array_rand($rowIndex);
+      $getIndexRowRand = $rowIndex[$randomKey];
+      $getIndexColRand = $colIndex[$randomKey]; 
+      $shuffleNewIndexRow = (($getIndexRowRand * 15) + 11) % 52; 
+      $shuffleNewIndexCol = (($getIndexColRand * 15) + 11) % 26;
+      $getStringRow = $matrix[$shuffleNewIndexRow][0];
+      $getStringCol = $matrix[0][$shuffleNewIndexCol];
       $result .= $getStringRow . $getStringCol;
     };
     // dd($rowIndex, $colIndex, $rowString, $colString, $getIndexRowRand, $getIndexColRand, $result);
     // dd($result);
-    // $reversedRow = (7 * ($shuffleNewIndexRow - 11 + 52)) % 52; 
-    // $reversedCol = (7 * ($shuffleNewIndexCol - 11 + 26)) % 26;
-    return $result;
+    return $result;dit 
   }
   public static function decryption($text) {
     $matrix = self::matrix();
-    $result = '';
+    $result = "";
     $chars = str_split($text);
     $pairs = array_chunk($chars, 2);
     foreach ($pairs as $pair) {
       if (count($pair) < 2) {
         continue;
       };
-      $rowIndex = null;
-      $colIndex = null;
+      $shuffleNewIndexRow = null;
+      $shuffleNewIndexCol = null;
       foreach ($matrix as $i => $row) {
-        $r = $row->search($pair[0]);
-        if ($r !== false) {
-          $rowIndex = $r;
+        if ($row[0] === $pair[0]) { 
+          $shuffleNewIndexRow = $i;
           break;
         };
       };
       foreach ($matrix[0] as $j => $value) {
         if ($value === $pair[1]) {
-          $colIndex = $j;
+          $shuffleNewIndexCol = $j;
           break;
         };
       };
-      if ($rowIndex !== null && $colIndex !== null) {
-        $result .= $matrix[$rowIndex][$colIndex];
+      if ($shuffleNewIndexRow !== null && $shuffleNewIndexCol !== null) {
+        $reversedRow = (7 * ($shuffleNewIndexRow - 11 + 52)) % 52; 
+        $reversedCol = (7 * ($shuffleNewIndexCol - 11 + 26)) % 26;
+        $result .= $matrix[$reversedRow][$reversedCol];
       };
     };
     // dd($result);

@@ -8,7 +8,7 @@ use App\Cryption\Cryptor;
 class WelcomeController extends Controller {
   public function index() {
     Cryptor::encryption("Hello");
-    Cryptor::decryption("QRbDvQjChH");
+    Cryptor::decryption("MNREPHWA B");
     return view('website.web.welcome');
   }
 }
