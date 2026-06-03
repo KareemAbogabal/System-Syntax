@@ -95,7 +95,7 @@ class Cryptor {
     };
     // dd($rowIndex, $colIndex, $rowString, $colString, $getIndexRowRand, $getIndexColRand, $result);
     // dd($result);
-    return $result;dit 
+    return $result;
   }
   public static function decryption($text) {
     $matrix = self::matrix();
