@@ -10,7 +10,7 @@ let radioPerson = document.getElementById("radio-person");
 let radioCompany = document.getElementById("radio-company");
 let company = document.querySelector(".company");
 let cursor = document.getElementById("customCursor");
-let hoverItems = document.querySelectorAll("a, button, input, textarea, select, .hoverable, label",);
+let hoverItems = document.querySelectorAll("a, button, input, textarea, select, .hoverable, label, .benefit",);
 let currentActiveIndex = -1;
 
 window.onload = () => {

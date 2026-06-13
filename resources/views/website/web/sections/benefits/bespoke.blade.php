@@ -13,8 +13,11 @@
     ]"
   />
   <section class="section-1">
+    <div class="shape" id="scene">
+      <div class="overlay-glow"></div>
+      <canvas id="dotsCanvas"></canvas>
+    </div>
     <div class="content">
-      <h1>Exclusive Systems Crafted For Distinguished Brands</h1>
       <button class="cssbuttons-io-button">
         Discover More
         <div class="icon">
@@ -103,4 +106,7 @@
       </div>
     </div>
   </section>
+  <script>
+    let text = "Tailored Rarity";
+  </script>
 @endsection

@@ -61,7 +61,7 @@ setActiveItem(0, false);
     spreadEase: 0.018,
 
     // سرعة التجمع عند المرور بالماوس
-    gatherEase: 0.10,
+    gatherEase: 0.09,
 
     // تقوية إضافية للهوفر
     hoverBoost: 0.60,

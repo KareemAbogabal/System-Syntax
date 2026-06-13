@@ -14,7 +14,9 @@
         <div class="rating-info">
           <div class="rating-top">
             <strong>4.9/5</strong>
-            <div class="stars">★★★★★</div>
+            <div class="stars" data-rating="2.5">
+              <div class="stars-fill"></div>
+            </div>
           </div>
           <p>Based on 24 reviews on Clutch</p>
         </div>

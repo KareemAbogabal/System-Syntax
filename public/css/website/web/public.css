@@ -71,6 +71,7 @@ input,
 textarea,
 select,
 canvas,
+.benefit,
 label {
   text-decoration: none;
   cursor: none !important;
@@ -1178,7 +1179,7 @@ header .main-avatar .muted {
   border: 1px solid #6f26f5;
 }
 
-.main-form .card form .main-check {
+.main-check {
   width: 100%;
   margin: 5px 0px;
   display: flex;
@@ -1186,11 +1187,11 @@ header .main-avatar .muted {
   align-items: center;
 }
 
-.main-form .card form .main-check .clear {
+.main-check .clear {
   clear: both;
 }
 
-.main-form .card form .main-check .checkBox {
+.main-check .checkBox {
   display: block;
   width: 20px;
   height: 20px;
@@ -1206,7 +1207,7 @@ header .main-avatar .muted {
   -o-border-radius: 5px;
 }
 
-.main-form .card form .main-check .checkBox div {
+.main-check .checkBox div {
   position: absolute;
   top: -52px;
   left: -52px;
@@ -1221,24 +1222,18 @@ header .main-avatar .muted {
   z-index: 100;
 }
 
-.main-form
-  .card
-  form
-  .main-check
-  .checkBox
-  input[type="checkbox"]:checked
-  + div {
+.main-check .checkBox input[type="checkbox"]:checked + div {
   left: -10px;
   top: -10px;
 }
 
-.main-form .card form .main-check .checkBox input[type="checkbox"] {
+.main-check .checkBox input[type="checkbox"] {
   position: absolute;
   left: 50px;
   visibility: hidden;
 }
 
-.main-form .card form .main-check .transition {
+.main-check .transition {
   transition: 300ms ease;
   -webkit-transition: 300ms ease;
   -moz-transition: 300ms ease;
@@ -1246,7 +1241,7 @@ header .main-avatar .muted {
   -o-transition: 300ms ease;
 }
 
-.main-form .card form .submit-btn {
+.submit-btn {
   background-image: var(--btn-bg-img);
   color: #fff;
   width: 100%;

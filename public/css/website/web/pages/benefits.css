@@ -1,5 +1,11 @@
 @import url("../public.css");
 
+.section-1 .content {
+  position: absolute;
+  top: 60%;
+  z-index: 5;
+}
+
 .section-2 .page {
   position: relative;
   width: 100%;

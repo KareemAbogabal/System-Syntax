@@ -24,9 +24,7 @@
   <x-components::website.web.nav 
     :ul="[
       ['name' => 'Home', 'url' => '#', 'active' => true],
-      ['name' => 'About Us', 'url' => '#'],
-      ['name' => 'Creativity', 'url' => '#'],
-      ['name' => 'Services', 'url' => '#'],
+      ['name' => 'Policys', 'url' => '#'],
     ]"
   />
   @include("website.web.sections.privacy_policy.section_1")

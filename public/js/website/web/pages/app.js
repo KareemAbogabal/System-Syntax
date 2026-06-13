@@ -16,6 +16,7 @@ const letters = "!@#$%^&*()_+=-{}[]<>?/|ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmn
 const originalText = textEl.textContent;
 const targetText = "More Us";
 const maxRandomTextLength = 20;
+const stars = document.querySelectorAll(".stars");
 
 let interval;
 
@@ -149,39 +150,43 @@ function makeChartCircle(element) {
   const doughnutConfig = {
     type: 'doughnut',
     data: {
-      datasets: [{
-        label: 'My First Dataset',
-        data: ctx1Att,
-        hoverOffset: 4,
-        backgroundColor: [
-          '#342bd8',
-          '#9941eb',
-        ],
-        borderWidth: 0,
-        cutout: '60%',
-      }]
+      datasets: [
+        {
+          data: [38, 24, 20, 18],
+          borderWidth: 0,
+          borderRadius: 20,
+          backgroundColor: ["#8f5bff", "#11c98a", "#ff6a1d", "#5d3eb3"],
+        },
+      ],
     },
-    options: {}
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      cutout: "68%",
+      plugins: {
+        legend: {
+          position: "bottom",
+          labels: {
+            color: "#fbf9ff",
+            usePointStyle: true,
+            pointStyle: "circle",
+            padding: 18,
+          },
+        },
+        tooltip: {
+          backgroundColor: "rgba(12, 8, 34, 0.95)",
+          titleColor: "#fff",
+          bodyColor: "#fff",
+          borderColor: "rgba(255,255,255,0.08)",
+          borderWidth: 1,
+        },
+      },
+    },
   };
   new Chart(element, doughnutConfig);
 };
 
 makeChartCircle(circleChart);
-
-// particlesJS("particles-js", {
-//   particles:{
-//     number:{ value: 120 },
-//     color:{ value: "#ffffff" },
-//     shape:{ type: "circle" },
-//     size:{ value: 2 },
-//     line_linked: {
-//       enable: true,
-//       distance: 150,
-//       color: "#ffffff"
-//     },
-//     move:{ enable: true, speed: 3 }
-//   }
-// });
 
 const gradients = [
   "linear-gradient(19deg, #00c853 0%, #b9f6ca 100%)",
@@ -220,4 +225,9 @@ window.addEventListener('hashchange', () => {
 
 btnOrder.addEventListener("click", () => {
   mainForm[0].classList.add("show-main-card");
+});
+
+stars.forEach(star => {
+  const rating = parseFloat(star.dataset.rating) || 0;
+  star.style.setProperty("--rating", rating);
 });
