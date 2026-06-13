@@ -3,7 +3,7 @@
 namespace App\Cryption;
 
 class Cryptor {
-  private static function matrix() {
+  private static function english() {
     return collect([
       collect([" ", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]),
       collect(["A", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]),
@@ -27,7 +27,7 @@ class Cryptor {
       collect(["S", "S", "T", "U", "V", "W", "X", "Y", "Z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R"]),
       collect(["T", "T", "U", "V", "W", "X", "Y", "Z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S"]),
       collect(["U", "U", "V", "W", "X", "Y", "Z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T"]),
-      collect(["V", "V", "V", "W", "X", "Y", "Z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T"]),
+      collect(["V", "V", "W", "X", "Y", "Z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U"]),
       collect(["W", "W", "X", "Y", "Z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V"]),
       collect(["X", "X", "Y", "Z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W"]),
       collect(["Y", "Y", "Z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X"]),
@@ -61,47 +61,107 @@ class Cryptor {
       collect(["z", "z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y"])
     ]);
   }
+  private static function arabic() {
+    return collect([
+      collect([" ", "ا", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي"]),
+      collect(["ا", "ا", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي"]),
+      collect(["ب", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي", "ا"]),
+      collect(["ت", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي", "ا", "ب"]),
+      collect(["ث", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي", "ا", "ب", "ت"]),
+      collect(["ج", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي", "ا", "ب", "ت", "ث"]),
+      collect(["ح", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي", "ا", "ب", "ت", "ث", "ج"]),
+      collect(["خ", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي", "ا", "ب", "ت", "ث", "ج", "ح"]),
+      collect(["د", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي", "ا", "ب", "ت", "ث", "ج", "ح", "خ"]),
+      collect(["ذ", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي", "ا", "ب", "ت", "ث", "ج", "ح", "خ", "د"]),
+      collect(["ر", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي", "ا", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ"]),
+      collect(["ز", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي", "ا", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر"]),
+      collect(["س", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي", "ا", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز"]),
+      collect(["ش", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي", "ا", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س"]),
+      collect(["ص", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي", "ا", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش"]),
+      collect(["ض", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي", "ا", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص"]),
+      collect(["ط", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي", "ا", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض"]),
+      collect(["ظ", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي", "ا", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط"]),
+      collect(["ع", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي", "ا", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ"]),
+      collect(["غ", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي", "ا", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع"]),
+      collect(["ف", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي", "ا", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ"]),
+      collect(["ق", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي", "ا", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف"]),
+      collect(["ك", "ك", "ل", "م", "ن", "ه", "و", "ي", "ا", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق"]),
+      collect(["ل", "ل", "م", "ن", "ه", "و", "ي", "ا", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك"]),
+      collect(["م", "م", "ن", "ه", "و", "ي", "ا", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل"]),
+      collect(["ن", "ن", "ه", "و", "ي", "ا", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م"]),
+      collect(["ه", "ه", "و", "ي", "ا", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن"]),
+      collect(["و", "و", "ي", "ا", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه"]),
+      collect(["ي", "ي", "ا", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و"]),
+    ]);
+  }
+  private static function detect_language($word) {
+    $text = trim($word);
+    if (preg_match('/[\x{0600}-\x{06FF}]/u', $text)) {
+      return self::arabic();
+    } elseif (preg_match('/^[a-zA-Z\s[:punct:]]+$/', $text)) {
+      return self::english();
+    };
+  }
   public static function encryption($word) {
     $rowIndex = [];
     $colIndex = [];
     $rowString = [];
     $colString = [];
-    $matrix = self::matrix();
+    $matrix = self::detect_language($word);
     $getIndexRowRand;
     $getIndexColRand;
+    $text = mb_str_split($word, 1, 'UTF-8');
     $result = "";
-    foreach (str_split($word) as $char) {
+    foreach ($text as $char) {
       $rowIndex = [];
       $colIndex = [];
       $rowString = [];
       $colString = [];
       foreach ($matrix as $i => $row) {
-        $j = $row->search($char);
-        if ($j !== false) {
+        $column = $row->search(function ($item) use ($char) {
+          return $item === $char;
+        });
+        if ($column !== false) {
           $rowIndex[] = $i;
-          $colIndex[] = $j;
+          $colIndex[] = $column;
           $rowString[] = $matrix[$i][0];
-          $colString[] = $matrix[0][$j];
+          $colString[] = $matrix[0][$column];
         };
       };
-      $randomKey = array_rand($rowIndex);
-      $getIndexRowRand = $rowIndex[$randomKey];
-      $getIndexColRand = $colIndex[$randomKey]; 
-      $shuffleNewIndexRow = (($getIndexRowRand * 15) + 11) % 52; 
-      $shuffleNewIndexCol = (($getIndexColRand * 15) + 11) % 26;
+      do {
+        $randomKey = array_rand($rowIndex);
+        $getIndexRowRand = $rowIndex[$randomKey];
+        $getIndexColRand = $colIndex[$randomKey]; 
+        $shuffleNewIndexRow = (($getIndexRowRand * 25) + 11) % count($matrix);
+        $shuffleNewIndexCol = (($getIndexColRand * 25) + 11) % (count($matrix[0]) - 1);
+      } while ($getIndexColRand == (count($matrix[0]) - 1) || $shuffleNewIndexRow == 27);
       $getStringRow = $matrix[$shuffleNewIndexRow][0];
       $getStringCol = $matrix[0][$shuffleNewIndexCol];
       $result .= $getStringRow . $getStringCol;
     };
     // dd($rowIndex, $colIndex, $rowString, $colString, $getIndexRowRand, $getIndexColRand, $result);
-    // dd($result);
+    // $res = self::decryption($result); // test
+    // dd($result, "Original number row: [$getIndexRowRand]", "Original number column: [$getIndexColRand]", $shuffleNewIndexRow, $shuffleNewIndexCol,  $res); // test
     return $result;
   }
-  public static function decryption($text) {
-    $matrix = self::matrix();
+  private static function modInverse($a, $m) {
+    $a = $a % $m;
+    for ($x = 1; $x < $m; $x++) {
+      if (($a * $x) % $m == 1) {
+        return $x;
+      };
+    };
+    return 1;
+  }
+  public static function decryption($word) {
+    $matrix = self::detect_language($word);
     $result = "";
-    $chars = str_split($text);
-    $pairs = array_chunk($chars, 2);
+    $text = mb_str_split($word, 1, 'UTF-8');
+    $pairs = array_chunk($text, 2);
+    $matrixRowCount = count($matrix);
+    $matrixColCount = count($matrix[0]) - 1;
+    $inverseRow = self::modInverse(25, $matrixRowCount);
+    $inverseCol = self::modInverse(25, $matrixColCount);
     foreach ($pairs as $pair) {
       if (count($pair) < 2) {
         continue;
@@ -121,12 +181,15 @@ class Cryptor {
         };
       };
       if ($shuffleNewIndexRow !== null && $shuffleNewIndexCol !== null) {
-        $reversedRow = (7 * ($shuffleNewIndexRow - 11 + 52)) % 52; 
-        $reversedCol = (7 * ($shuffleNewIndexCol - 11 + 26)) % 26;
+        $reversedRow = ($inverseRow * ($shuffleNewIndexRow - 11 + $matrixRowCount)) % $matrixRowCount;
+        $reversedCol = ($inverseCol * ($shuffleNewIndexCol - 11 + $matrixColCount)) % $matrixColCount;
+        if ($shuffleNewIndexCol == 11) {
+          $reversedCol = (25 * ($shuffleNewIndexCol - 11 + 27)) % 27;
+        };
         $result .= $matrix[$reversedRow][$reversedCol];
       };
     };
     // dd($result);
-    return $result;
+    return [$result, $shuffleNewIndexRow, $shuffleNewIndexCol, "Original number row: [$reversedRow]", "Original number column: [$reversedCol]"];
   }
 }

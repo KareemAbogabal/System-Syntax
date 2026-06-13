@@ -726,7 +726,7 @@
               <span class="tag">Design</span>
             </div>
           </div>
-          <a class="download" href="#" aria-label="Download">
+          <a class="button-top" href="#" aria-label="Download">
             <svg viewBox="0 0 24 24" fill="none">
               <path d="M12 3v10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
               <path d="M8.5 10.5L12 13.9l3.5-3.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -846,7 +846,7 @@
               <span class="tag">Design</span>
             </div>
           </div>
-          <a class="download" href="#" aria-label="Download">
+          <a class="button-top" href="#" aria-label="Download">
             <svg viewBox="0 0 24 24" fill="none">
               <path d="M12 3v10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
               <path d="M8.5 10.5L12 13.9l3.5-3.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -966,7 +966,7 @@
               <span class="tag">Design</span>
             </div>
           </div>
-          <a class="download" href="#" aria-label="Download">
+          <a class="button-top" href="#" aria-label="Download">
             <svg viewBox="0 0 24 24" fill="none">
               <path d="M12 3v10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
               <path d="M8.5 10.5L12 13.9l3.5-3.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1086,7 +1086,7 @@
               <span class="tag">Design</span>
             </div>
           </div>
-          <a class="download" href="#" aria-label="Download">
+          <a class="button-top" href="#" aria-label="Download">
             <svg viewBox="0 0 24 24" fill="none">
               <path d="M12 3v10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
               <path d="M8.5 10.5L12 13.9l3.5-3.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1206,7 +1206,7 @@
               <span class="tag">Design</span>
             </div>
           </div>
-          <a class="download" href="#" aria-label="Download">
+          <a class="button-top" href="#" aria-label="Download">
             <svg viewBox="0 0 24 24" fill="none">
               <path d="M12 3v10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
               <path d="M8.5 10.5L12 13.9l3.5-3.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1326,7 +1326,7 @@
               <span class="tag">Design</span>
             </div>
           </div>
-          <a class="download" href="#" aria-label="Download">
+          <a class="button-top" href="#" aria-label="Download">
             <svg viewBox="0 0 24 24" fill="none">
               <path d="M12 3v10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
               <path d="M8.5 10.5L12 13.9l3.5-3.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>

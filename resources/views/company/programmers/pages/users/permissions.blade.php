@@ -39,9 +39,9 @@
       </article>
     </section>
     <section class="permissions-page__grid">
-      <article class="permissions-page__card card-inner">
-        <div class="permissions-page__card-head">
-          <div class="permissions-page__card-top">
+      <article class="permissions-card card-inner">
+        <div class="permissions-card-head">
+          <div class="permissions-card-top">
             <div class="permissions-page__user">
               <div class="permissions-page__avatar-wrap">
                 <img src="https://i.pravatar.cc/120?img=11" loading="lazy" alt="User avatar">
@@ -61,23 +61,23 @@
             </label>
           </div>
         </div>
-        <div class="permissions-page__scroll">
-          <div class="permissions-page__group">
-            <div class="permissions-page__group-title">Employees</div>
-            <div class="permissions-page__rows">
-              <div class="permissions-page__row"><span>View</span>
+        <div class="permissions-scroll">
+          <div class="permissions-group">
+            <div class="permissions-title">Employees</div>
+            <div class="permissions-rows">
+              <div class="permissions-row"><span>View</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Edit</span>
+              <div class="permissions-row"><span>Edit</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Delete</span>
+              <div class="permissions-row"><span>Delete</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
@@ -85,22 +85,22 @@
               </div>
             </div>
           </div>
-          <div class="permissions-page__group">
-            <div class="permissions-page__group-title">Promotions</div>
-            <div class="permissions-page__rows">
-              <div class="permissions-page__row"><span>View</span>
+          <div class="permissions-group">
+            <div class="permissions-title">Promotions</div>
+            <div class="permissions-rows">
+              <div class="permissions-row"><span>View</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Approve</span>
+              <div class="permissions-row"><span>Approve</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Create</span>
+              <div class="permissions-row"><span>Create</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
@@ -108,22 +108,22 @@
               </div>
             </div>
           </div>
-          <div class="permissions-page__group">
-            <div class="permissions-page__group-title">Reports</div>
-            <div class="permissions-page__rows">
-              <div class="permissions-page__row"><span>View</span>
+          <div class="permissions-group">
+            <div class="permissions-title">Reports</div>
+            <div class="permissions-rows">
+              <div class="permissions-row"><span>View</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Export</span>
+              <div class="permissions-row"><span>Export</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Delete</span>
+              <div class="permissions-row"><span>Delete</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
@@ -131,16 +131,16 @@
               </div>
             </div>
           </div>
-          <div class="permissions-page__group">
-            <div class="permissions-page__group-title">Settings</div>
-            <div class="permissions-page__rows">
-              <div class="permissions-page__row"><span>View</span>
+          <div class="permissions-group">
+            <div class="permissions-title">Settings</div>
+            <div class="permissions-rows">
+              <div class="permissions-row"><span>View</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Edit</span>
+              <div class="permissions-row"><span>Edit</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
@@ -174,9 +174,9 @@
           </button>
         </div>
       </article>
-      <article class="permissions-page__card card-inner">
-        <div class="permissions-page__card-head">
-          <div class="permissions-page__card-top">
+      <article class="permissions-card card-inner">
+        <div class="permissions-card-head">
+          <div class="permissions-card-top">
             <div class="permissions-page__user">
               <div class="permissions-page__avatar-wrap">
                 <img src="https://i.pravatar.cc/120?img=24" loading="lazy" alt="User avatar">
@@ -196,23 +196,23 @@
             </label>
           </div>
         </div>
-        <div class="permissions-page__scroll">
-          <div class="permissions-page__group">
-            <div class="permissions-page__group-title">Projects</div>
-            <div class="permissions-page__rows">
-              <div class="permissions-page__row"><span>View</span>
+        <div class="permissions-scroll">
+          <div class="permissions-group">
+            <div class="permissions-title">Projects</div>
+            <div class="permissions-rows">
+              <div class="permissions-row"><span>View</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Edit</span>
+              <div class="permissions-row"><span>Edit</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Delete</span>
+              <div class="permissions-row"><span>Delete</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
@@ -220,22 +220,22 @@
               </div>
             </div>
           </div>
-          <div class="permissions-page__group">
-            <div class="permissions-page__group-title">Reports</div>
-            <div class="permissions-page__rows">
-              <div class="permissions-page__row"><span>View</span>
+          <div class="permissions-group">
+            <div class="permissions-title">Reports</div>
+            <div class="permissions-rows">
+              <div class="permissions-row"><span>View</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Export</span>
+              <div class="permissions-row"><span>Export</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Delete</span>
+              <div class="permissions-row"><span>Delete</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
@@ -243,16 +243,16 @@
               </div>
             </div>
           </div>
-          <div class="permissions-page__group">
-            <div class="permissions-page__group-title">Teams</div>
-            <div class="permissions-page__rows">
-              <div class="permissions-page__row"><span>View</span>
+          <div class="permissions-group">
+            <div class="permissions-title">Teams</div>
+            <div class="permissions-rows">
+              <div class="permissions-row"><span>View</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Edit</span>
+              <div class="permissions-row"><span>Edit</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
@@ -260,16 +260,16 @@
               </div>
             </div>
           </div>
-          <div class="permissions-page__group">
-            <div class="permissions-page__group-title">Employees</div>
-            <div class="permissions-page__rows">
-              <div class="permissions-page__row"><span>View</span>
+          <div class="permissions-group">
+            <div class="permissions-title">Employees</div>
+            <div class="permissions-rows">
+              <div class="permissions-row"><span>View</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Edit</span>
+              <div class="permissions-row"><span>Edit</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
@@ -303,9 +303,9 @@
           </button>
         </div>
       </article>
-      <article class="permissions-page__card card-inner">
-        <div class="permissions-page__card-head">
-          <div class="permissions-page__card-top">
+      <article class="permissions-card card-inner">
+        <div class="permissions-card-head">
+          <div class="permissions-card-top">
             <div class="permissions-page__user">
               <div class="permissions-page__avatar-wrap">
                 <img src="https://i.pravatar.cc/120?img=33" loading="lazy" alt="User avatar">
@@ -325,23 +325,23 @@
             </label>
           </div>
         </div>
-        <div class="permissions-page__scroll">
-          <div class="permissions-page__group">
-            <div class="permissions-page__group-title">Design System</div>
-            <div class="permissions-page__rows">
-              <div class="permissions-page__row"><span>View</span>
+        <div class="permissions-scroll">
+          <div class="permissions-group">
+            <div class="permissions-title">Design System</div>
+            <div class="permissions-rows">
+              <div class="permissions-row"><span>View</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Edit</span>
+              <div class="permissions-row"><span>Edit</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Delete</span>
+              <div class="permissions-row"><span>Delete</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
@@ -349,22 +349,22 @@
               </div>
             </div>
           </div>
-          <div class="permissions-page__group">
-            <div class="permissions-page__group-title">Assets</div>
-            <div class="permissions-page__rows">
-              <div class="permissions-page__row"><span>View</span>
+          <div class="permissions-group">
+            <div class="permissions-title">Assets</div>
+            <div class="permissions-rows">
+              <div class="permissions-row"><span>View</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Upload</span>
+              <div class="permissions-row"><span>Upload</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Delete</span>
+              <div class="permissions-row"><span>Delete</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
@@ -372,16 +372,16 @@
               </div>
             </div>
           </div>
-          <div class="permissions-page__group">
-            <div class="permissions-page__group-title">Projects</div>
-            <div class="permissions-page__rows">
-              <div class="permissions-page__row"><span>View</span>
+          <div class="permissions-group">
+            <div class="permissions-title">Projects</div>
+            <div class="permissions-rows">
+              <div class="permissions-row"><span>View</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Edit</span>
+              <div class="permissions-row"><span>Edit</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
@@ -415,9 +415,9 @@
           </button>
         </div>
       </article>
-      <article class="permissions-page__card card-inner">
-        <div class="permissions-page__card-head">
-          <div class="permissions-page__card-top">
+      <article class="permissions-card card-inner">
+        <div class="permissions-card-head">
+          <div class="permissions-card-top">
             <div class="permissions-page__user">
               <div class="permissions-page__avatar-wrap">
                 <img src="https://i.pravatar.cc/120?img=44" loading="lazy" alt="User avatar">
@@ -437,23 +437,23 @@
             </label>
           </div>
         </div>
-        <div class="permissions-page__scroll">
-          <div class="permissions-page__group">
-            <div class="permissions-page__group-title">Infrastructure</div>
-            <div class="permissions-page__rows">
-              <div class="permissions-page__row"><span>View</span>
+        <div class="permissions-scroll">
+          <div class="permissions-group">
+            <div class="permissions-title">Infrastructure</div>
+            <div class="permissions-rows">
+              <div class="permissions-row"><span>View</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Edit</span>
+              <div class="permissions-row"><span>Edit</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Delete</span>
+              <div class="permissions-row"><span>Delete</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
@@ -461,34 +461,34 @@
               </div>
             </div>
           </div>
-          <div class="permissions-page__group">
-            <div class="permissions-page__group-title">Deployments</div>
-            <div class="permissions-page__rows">
-              <div class="permissions-page__row"><span>View</span>
+          <div class="permissions-group">
+            <div class="permissions-title">Deployments</div>
+            <div class="permissions-rows">
+              <div class="permissions-row"><span>View</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Approve</span>
+              <div class="permissions-row"><span>Approve</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Rollback</span><label class="switch"><input type="checkbox"></label></div>
+              <div class="permissions-row"><span>Rollback</span><label class="switch"><input type="checkbox"></label></div>
             </div>
           </div>
-          <div class="permissions-page__group">
-            <div class="permissions-page__group-title">Security</div>
-            <div class="permissions-page__rows">
-              <div class="permissions-page__row"><span>View Logs</span>
+          <div class="permissions-group">
+            <div class="permissions-title">Security</div>
+            <div class="permissions-rows">
+              <div class="permissions-row"><span>View Logs</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Manage Access</span>
+              <div class="permissions-row"><span>Manage Access</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
@@ -522,9 +522,9 @@
           </button>
         </div>
       </article>
-      <article class="permissions-page__card card-inner">
-        <div class="permissions-page__card-head">
-          <div class="permissions-page__card-top">
+      <article class="permissions-card card-inner">
+        <div class="permissions-card-head">
+          <div class="permissions-card-top">
             <div class="permissions-page__user">
               <div class="permissions-page__avatar-wrap">
                 <img src="https://i.pravatar.cc/120?img=52" loading="lazy" alt="User avatar">
@@ -544,23 +544,23 @@
             </label>
           </div>
         </div>
-        <div class="permissions-page__scroll">
-          <div class="permissions-page__group">
-            <div class="permissions-page__group-title">Analytics</div>
-            <div class="permissions-page__rows">
-              <div class="permissions-page__row"><span>View</span>
+        <div class="permissions-scroll">
+          <div class="permissions-group">
+            <div class="permissions-title">Analytics</div>
+            <div class="permissions-rows">
+              <div class="permissions-row"><span>View</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Export</span>
+              <div class="permissions-row"><span>Export</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Delete</span>
+              <div class="permissions-row"><span>Delete</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
@@ -568,17 +568,17 @@
               </div>
             </div>
           </div>
-          <div class="permissions-page__group">
-            <div class="permissions-page__group-title">Reports</div>
-            <div class="permissions-page__rows">
-              <div class="permissions-page__row"><span>Create</span>
+          <div class="permissions-group">
+            <div class="permissions-title">Reports</div>
+            <div class="permissions-rows">
+              <div class="permissions-row"><span>Create</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Publish</span><label class="switch"><input type="checkbox"></label></div>
-              <div class="permissions-page__row"><span>Archive</span>
+              <div class="permissions-row"><span>Publish</span><label class="switch"><input type="checkbox"></label></div>
+              <div class="permissions-row"><span>Archive</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
@@ -612,9 +612,9 @@
           </button>
         </div>
       </article>
-      <article class="permissions-page__card card-inner">
-        <div class="permissions-page__card-head">
-          <div class="permissions-page__card-top">
+      <article class="permissions-card card-inner">
+        <div class="permissions-card-head">
+          <div class="permissions-card-top">
             <div class="permissions-page__user">
               <div class="permissions-page__avatar-wrap">
                 <img src="https://i.pravatar.cc/120?img=61" loading="lazy" alt="User avatar">
@@ -634,23 +634,23 @@
             </label>
           </div>
         </div>
-        <div class="permissions-page__scroll">
-          <div class="permissions-page__group">
-            <div class="permissions-page__group-title">Products</div>
-            <div class="permissions-page__rows">
-              <div class="permissions-page__row"><span>View</span>
+        <div class="permissions-scroll">
+          <div class="permissions-group">
+            <div class="permissions-title">Products</div>
+            <div class="permissions-rows">
+              <div class="permissions-row"><span>View</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Edit</span>
+              <div class="permissions-row"><span>Edit</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Release</span>
+              <div class="permissions-row"><span>Release</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
@@ -658,22 +658,22 @@
               </div>
             </div>
           </div>
-          <div class="permissions-page__group">
-            <div class="permissions-page__group-title">Roadmap</div>
-            <div class="permissions-page__rows">
-              <div class="permissions-page__row"><span>View</span>
+          <div class="permissions-group">
+            <div class="permissions-title">Roadmap</div>
+            <div class="permissions-rows">
+              <div class="permissions-row"><span>View</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Prioritize</span>
+              <div class="permissions-row"><span>Prioritize</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" checked name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>
                 </label>
               </div>
-              <div class="permissions-page__row"><span>Delete</span>
+              <div class="permissions-row"><span>Delete</span>
                 <label class="switch-card" data-style data-no-active>
                   <input type="checkbox" name="permissions[]" value="dashboard">
                   <span class="switch-slider"></span>

@@ -45,9 +45,10 @@ function validatePassword(password) {
 };
 
 function setNewPassword() {
-  const password = generatePassword(14);
-  firstInput.value = password;
-  secondInput.value = password;
+  const password1 = generatePassword(14);
+  const password2 = generatePassword(14);
+  firstInput.value = password1;
+  secondInput.value = password2;
   validatePassword(password);
 };
 

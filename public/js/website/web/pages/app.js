@@ -168,20 +168,20 @@ function makeChartCircle(element) {
 
 makeChartCircle(circleChart);
 
-particlesJS("particles-js", {
-  particles:{
-    number:{ value: 120 },
-    color:{ value: "#ffffff" },
-    shape:{ type: "circle" },
-    size:{ value: 2 },
-    line_linked: {
-      enable: true,
-      distance: 150,
-      color: "#ffffff"
-    },
-    move:{ enable: true, speed: 3 }
-  }
-});
+// particlesJS("particles-js", {
+//   particles:{
+//     number:{ value: 120 },
+//     color:{ value: "#ffffff" },
+//     shape:{ type: "circle" },
+//     size:{ value: 2 },
+//     line_linked: {
+//       enable: true,
+//       distance: 150,
+//       color: "#ffffff"
+//     },
+//     move:{ enable: true, speed: 3 }
+//   }
+// });
 
 const gradients = [
   "linear-gradient(19deg, #00c853 0%, #b9f6ca 100%)",

@@ -4,6 +4,90 @@
 
 @section('page')
   <div class="sections-page">
+    <x-components::company.popupForm header="Permissions Branch" description="Prioritize those who deserve to control the branch" dataFollowButton="permissions-branch" pathPostForm="#">
+      <div class="permissions-scroll">
+        <div class="permissions-group">
+          <div class="permissions-title">Projects</div>
+          <div class="permissions-rows">
+            <div class="permissions-row"><span>View</span>
+              <label class="switch-card" data-style data-no-active>
+                <input type="checkbox" checked name="permissions[]" value="dashboard">
+                <span class="switch-slider"></span>
+              </label>
+            </div>
+            <div class="permissions-row"><span>Edit</span>
+              <label class="switch-card" data-style data-no-active>
+                <input type="checkbox" checked name="permissions[]" value="dashboard">
+                <span class="switch-slider"></span>
+              </label>
+            </div>
+            <div class="permissions-row"><span>Delete</span>
+              <label class="switch-card" data-style data-no-active>
+                <input type="checkbox" name="permissions[]" value="dashboard">
+                <span class="switch-slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="permissions-group">
+          <div class="permissions-title">Reports</div>
+          <div class="permissions-rows">
+            <div class="permissions-row"><span>View</span>
+              <label class="switch-card" data-style data-no-active>
+                <input type="checkbox" checked name="permissions[]" value="dashboard">
+                <span class="switch-slider"></span>
+              </label>
+            </div>
+            <div class="permissions-row"><span>Export</span>
+              <label class="switch-card" data-style data-no-active>
+                <input type="checkbox" name="permissions[]" value="dashboard">
+                <span class="switch-slider"></span>
+              </label>
+            </div>
+            <div class="permissions-row"><span>Delete</span>
+              <label class="switch-card" data-style data-no-active>
+                <input type="checkbox" name="permissions[]" value="dashboard">
+                <span class="switch-slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="permissions-group">
+          <div class="permissions-title">Teams</div>
+          <div class="permissions-rows">
+            <div class="permissions-row"><span>View</span>
+              <label class="switch-card" data-style data-no-active>
+                <input type="checkbox" checked name="permissions[]" value="dashboard">
+                <span class="switch-slider"></span>
+              </label>
+            </div>
+            <div class="permissions-row"><span>Edit</span>
+              <label class="switch-card" data-style data-no-active>
+                <input type="checkbox" checked name="permissions[]" value="dashboard">
+                <span class="switch-slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="permissions-group">
+          <div class="permissions-title">Employees</div>
+          <div class="permissions-rows">
+            <div class="permissions-row"><span>View</span>
+              <label class="switch-card" data-style data-no-active>
+                <input type="checkbox" checked name="permissions[]" value="dashboard">
+                <span class="switch-slider"></span>
+              </label>
+            </div>
+            <div class="permissions-row"><span>Edit</span>
+              <label class="switch-card" data-style data-no-active>
+                <input type="checkbox" name="permissions[]" value="dashboard">
+                <span class="switch-slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </x-components::company.popupForm>
     <x-components::company.popupForm header="Add Branch" description="Adding a new branch to the company demonstrates its prestige and productivity" dataFollowButton="add-branch" pathPostForm="#">
       <div class="row">
         <div class="perant-input">
@@ -32,7 +116,7 @@
         <span class="sub">Assign and control Company</span>
       </div>
       <div class="right">
-        <button class="add-company button-form" data-follow="add-branch">Add Company</button>
+        <button class="add-company button-form" data-follow="add-branch">Add branch</button>
       </div>
     </div>
     <x-components::company.fillterBar :pills="['All', 'block', 'access']" />
@@ -61,6 +145,12 @@
             </div>
             <button class="state-btn access button-form" data-id="9089989" data-follow="add-preson-branch" type="button">
               Add Person
+            </button>
+            <button class="button-top button-form" data-id="9089989" data-follow="permissions-branch" type="button">
+              <svg width="30" height="30" viewBox="-15 -15 130 130" xmlns="http://www.w3.org/2000/svg" fill="none">
+                <path d="M50 10  L85 25  V50  C85 72 70 88 50 95  C30 88 15 72 15 50  V25  Z" fill="none" stroke="white" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+                <path d="M35 55 L45 65 L68 42" stroke="white" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             </button>
           </div>
           <div class="avatars">
@@ -245,6 +335,12 @@
               type="button">
               Add Person
             </button>
+            <button class="button-top button-form" data-id="9089989" data-follow="permissions-branch" type="button">
+              <svg width="30" height="30" viewBox="-15 -15 130 130" xmlns="http://www.w3.org/2000/svg" fill="none">
+                <path d="M50 10  L85 25  V50  C85 72 70 88 50 95  C30 88 15 72 15 50  V25  Z" fill="none" stroke="white" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+                <path d="M35 55 L45 65 L68 42" stroke="white" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
           </div>
           <div class="avatars">
             <a href="/company/user-details" class="avatar-link">
@@ -351,6 +447,12 @@
             <button class="state-btn access button-form" data-id="9089989" data-follow="add-preson-branch"
               type="button">
               Add Person
+            </button>
+            <button class="button-top button-form" data-id="9089989" data-follow="permissions-branch" type="button">
+              <svg width="30" height="30" viewBox="-15 -15 130 130" xmlns="http://www.w3.org/2000/svg" fill="none">
+                <path d="M50 10  L85 25  V50  C85 72 70 88 50 95  C30 88 15 72 15 50  V25  Z" fill="none" stroke="white" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+                <path d="M35 55 L45 65 L68 42" stroke="white" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             </button>
           </div>
           <div class="avatars">
