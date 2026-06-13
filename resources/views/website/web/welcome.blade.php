@@ -30,6 +30,20 @@
       ['name' => 'Services', 'url' => '#'],
     ]"
   />
+  <div id="luxContextMenu" class="lux-context-menu">
+    <div class="lux-context-header">
+      <span>System Syntax</span>
+      <small>Private Access</small>
+    </div>
+    <button class="lux-item" data-action="home">Home</button>
+    <button class="lux-item" data-action="services">Services</button>
+    <button class="lux-item" data-action="request">Request Project</button>
+    <button class="lux-item" data-action="login">Client Access</button>
+    <button class="lux-item" data-action="translate">Translate Page</button>
+    <button class="lux-item" data-action="print">Print</button>
+    <button class="lux-item" data-action="copy-link">Copy Link</button>
+    <button class="lux-item" data-action="save">Save As</button>
+  </div>
   @include("website.web.sections.welcome.section_1")
   @include("website.web.sections.welcome.section_2")
   @include("website.web.sections.welcome.section_3")
@@ -38,7 +52,6 @@
   @include("website.web.sections.welcome.section_6")
   @include("website.web.sections.footer")
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="{{ asset('js/animationLogo.js') }}"></script>
   <script src="{{ asset('js/website/web/public.js') }}"></script>
   <script src="{{ asset('js/website/web/pages/app.js') }}"></script>

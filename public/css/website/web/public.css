@@ -1326,6 +1326,100 @@ header .main-avatar .muted {
   z-index: -1;
 }
 
+.lux-context-menu {
+  position: fixed;
+  width: 280px;
+  background: rgba(1, 1, 32, 0.753);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px) scale(0.96);
+  transition:
+    opacity 0.25s ease,
+    transfor m 0.25s ease,
+    visibili ty 0.25s ease;
+  -webkit-transition:
+    opacity 0.25s ease,
+    transfor m 0.25s ease,
+    visibili ty 0.25s ease;
+  -moz-transition:
+    opacity 0.25s ease,
+    transfor m 0.25s ease,
+    visibili ty 0.25s ease;
+  -ms-transition:
+    opacity 0.25s ease,
+    transfor m 0.25s ease,
+    visibili ty 0.25s ease;
+  -o-transition:
+    opacity 0.25s ease,
+    transfor m 0.25s ease,
+    visibili ty 0.25s ease;
+}
+
+.lux-context-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  -webkit-transform: translateY(0) scale(1);
+  -moz-transform: translateY(0) scale(1);
+  -ms-transform: translateY(0) scale(1);
+  -o-transform: translateY(0) scale(1);
+}
+
+.lux-context-header {
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.lux-context-header span {
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.lux-context-header small {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.lux-item {
+  width: 100%;
+  border: none;
+  background: none;
+  color: white;
+  padding: 18px 22px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s ease, padding-left 0.2s ease;
+  -webkit-transition: background 0.2s ease, padding-left 0.2s ease;
+  -moz-transition: background 0.2s ease, padding-left 0.2s ease;
+  -ms-transition: background 0.2s ease, padding-left 0.2s ease;
+  -o-transition: background 0.2s ease, padding-left 0.2s ease;
+}
+
+.lux-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  padding-left: 30px;
+}
+
+.lux-item:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
 section {
   padding: 20px;
   width: 100%;

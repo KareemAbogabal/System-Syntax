@@ -293,6 +293,6 @@ Route::controller(CompanySettingsController::class)->group(function () {
   Route::get('/company/settings', 'index')->name('company.settings');
 });
 
-// Route::get('/test-503', function () {
-//     return response()->view('errors.503', [], 503);
+// Route::get('/test-403', function () {
+//   return response()->view('errors.403', [], 403);
 // });

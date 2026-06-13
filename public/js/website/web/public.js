@@ -150,3 +150,103 @@ hoverItems.forEach((item) => {
     cursor.classList.remove("active");
   });
 });
+
+const menu = document.getElementById('luxContextMenu');
+
+function openMenu(x, y) {
+  const width = 280;
+  const height = 370;
+  let left = x;
+  let top = y;
+  if (left + width > window.innerWidth) {
+    left = window.innerWidth - width - 20;
+  };
+  if (top + height > window.innerHeight) {
+    top = window.innerHeight - height - 20;
+  };
+  menu.style.left = left + 'px';
+  menu.style.top = top + 'px';
+  menu.classList.add('active');
+};
+
+function closeMenu() {
+  menu.classList.remove('active');
+};
+
+document.addEventListener('contextmenu', (e) => {
+  e.preventDefault();
+  openMenu(e.clientX, e.clientY);
+});
+
+document.addEventListener('click', (e) => {
+  if (!menu.contains(e.target)) closeMenu();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeMenu();
+});
+
+window.addEventListener('scroll', closeMenu);
+window.addEventListener('resize', closeMenu);
+
+menu.addEventListener('click', async (e) => {
+  const btn = e.target.closest('.lux-item');
+  if (!btn) return;
+  const action = btn.dataset.action;
+  switch (action) {
+    case 'home':
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      break;
+    case 'services':
+      document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' });
+      break;
+    case 'request':
+      document.querySelector('[data-open-request-form]')?.click();
+      break;
+    case 'login':
+      document.querySelector('[data-open-login-form]')?.click();
+      break;
+    case 'translate':
+      const selectedText = window.getSelection().toString().trim();
+      if (!selectedText) {
+        alert('قم بتحديد نص أولاً');
+        break;
+      };
+      window.open(
+        `https://translate.google.com/?sl=auto&tl=en&text=${encodeURIComponent(selectedText)}&op=translate`,
+        '_blank',
+        'noopener,noreferrer'
+      );
+    break;
+      break;
+    case 'print':
+      window.print();
+      break;
+    case 'copy-link':
+      await navigator.clipboard.writeText(location.href);
+      break;
+    case 'save':
+      alert('المتصفح لا يسمح بتنفيذ Save as من JavaScript. يمكنك توفير بديل مثل Print أو Download.');
+      break;
+  };
+  closeMenu();
+});
+
+const isMobile = /Android|iPhone|iPad|iPod/i.test(
+  navigator.userAgent
+);
+
+if (!isMobile) {
+  setInterval(() => {
+    const devtoolsOpen =
+      window.outerWidth - window.innerWidth > 160 ||
+      window.outerHeight - window.innerHeight > 160;
+    if (devtoolsOpen) {
+      document.body.innerHTML = `
+        <div style="position:fixed; inset:0; background:#000; color:#fff; display:flex; align-items:center; justify-content:center; font-size:24px;">
+          Developer Tools Detected
+        </div>
+      `;
+    };
+  }, 1000);
+};
